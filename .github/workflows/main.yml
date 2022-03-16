@@ -46,4 +46,4 @@ jobs:
       - name: Flutter Pub Test
         run: flutter test
       - name: Make IPA
-        run: flutter build ios --release --no-codesign
+        run: flutter build ipa --release --no-codesign
