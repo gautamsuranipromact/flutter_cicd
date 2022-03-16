@@ -48,13 +48,13 @@ jobs:
           flutter-version: '2.5.3'
       - name: Flutter Pub Get
         run: flutter pub get
+      - run: |
+          cd android
+          ls
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
-      - run: |
-          cd android
-          ls
       - name: Install Dependencies
         run: gem install bundler && bundle install
       - name: Make gradlew executable
