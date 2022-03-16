@@ -5,3 +5,5 @@ mv Payload.zip Payload.ipa
 
 # the following are options, remove Payload folder
 rm -Rf Payload
+
+open .
