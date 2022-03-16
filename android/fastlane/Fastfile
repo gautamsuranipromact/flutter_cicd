@@ -3,7 +3,7 @@ default_platform(:android)
 platform :android do
    desc "Assemble source"
     lane :assemble do
-      gradle(task: "assembleDebug")
+      gradle(task: "assembleRelease")
     end
     lane :testfairy do
       testfairy(
