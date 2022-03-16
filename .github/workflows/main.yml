@@ -82,9 +82,11 @@ jobs:
           cd build/ios/iphoneos
           mkdir Payload
           cd Payload
-          ln -s ../Runner.app
+          ln -s /Users/runner/work/flutter_cicd/flutter_cicd/build/ios/iphoneos/Runner.app
           cd ..
           zip -r app.ipa Payload
+          echo pwd
+          ls
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
