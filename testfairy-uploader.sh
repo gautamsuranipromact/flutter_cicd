@@ -37,6 +37,9 @@ verify_tools() {
 	# Windows users: this script requires curl. If not installed please get from http://cygwin.com/
 
 	# Check 'curl' tool
+
+	echo "verify_tools"
+
 	"${CURL}" --help >/dev/null
 	if [ $? -ne 0 ]; then
 		echo "Could not run curl tool, please check settings"
@@ -45,6 +48,9 @@ verify_tools() {
 }
 
 verify_settings() {
+
+  echo "verify_settings"
+
 	if [ -z "${TESTFAIRY_API_KEY}" ]; then
 		usage
 		echo "Please update API_KEY with your private API key, as noted in the Settings page"
