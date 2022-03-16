@@ -57,12 +57,6 @@ jobs:
           ruby-version: 2.6.x
       - name: Run Fastlane Assemble Lane
         run: fastlane assemble
-      - name: Run Fastlane testfairy Lane
-        run: fastlane testfairy
-      - name: Make testfairy executable
-        run: chmod +x ./testfairy-uploader.sh
-      - name: Moving APK to TestFairy
-        run: ./testfairy-uploader.sh build/app/outputs/flutter-apk/app-release.apk ${{ secrets.TESTFAIRY_API_KEY }}
 
 #  github-action-ios:
 #    runs-on: macos-latest
