@@ -52,12 +52,15 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+      - run: cd android
       - name: Install Dependencies
         run: gem install bundler && bundle install
       - name: Make gradlew executable
         run: chmod +x /home/runner/work/demo/demo/gradlew
       - name: Run Fastlane Assemble Lane
         run: fastlane assemble
+      - name: Run Fastlane testfairy Lane
+        run: fastlane testfairy
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving APK to TestFairy
