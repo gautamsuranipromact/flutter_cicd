@@ -87,10 +87,10 @@ jobs:
           zip -r app.ipa Payload
           echo pwd
           ls
-          cd ./
+          cd ../../..
           ls
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
         run: |
-          exec ./testfairy-uploader.sh Users/runner/work/flutter_cicd/flutter_cicd/build/ios/iphoneos/app.ipa ${{ secrets.TESTFAIRY_API_KEY }}
+          exec ./testfairy-uploader.sh build/ios/iphoneos/app.ipa ${{ secrets.TESTFAIRY_API_KEY }}
