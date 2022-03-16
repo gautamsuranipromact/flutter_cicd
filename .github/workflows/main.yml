@@ -54,4 +54,4 @@ jobs:
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
-        run: ./testfairy-uploader.sh ./Payload.ipa
+        run: ./testfairy-uploader.sh Payload.ipa
