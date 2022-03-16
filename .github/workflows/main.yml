@@ -45,13 +45,13 @@ jobs:
         run: flutter pub get
       - name: Flutter Pub Test
         run: flutter test
-      - name: Make IPA
+      - name: Build IOS
         run: flutter build ios --release --no-codesign
       - name: Make generate-ios executable
         run: chmod +x ./generate-ios.sh
-      - name: Moving APK to TestFairy
+      - name: Make IPA
         run: ./generate-ios.sh
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
-      - name: Moving APK to TestFairy
-        run: ./testfairy-uploader.sh Payload.ipa
+      - name: Moving IPA to TestFairy
+        run: ./testfairy-uploader.sh ./Payload.ipa

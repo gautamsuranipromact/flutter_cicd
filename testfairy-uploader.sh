@@ -40,7 +40,7 @@ verify_tools() {
 	"${CURL}" --help >/dev/null
 	if [ $? -ne 0 ]; then
 		echo "Could not run curl tool, please check settings"
-		exit 2
+		exit 1
 	fi
 }
 
@@ -48,13 +48,13 @@ verify_settings() {
 	if [ -z "${TESTFAIRY_API_KEY}" ]; then
 		usage
 		echo "Please update API_KEY with your private API key, as noted in the Settings page"
-		exit 2
+		exit 1
 	fi
 }
 
-if [ $# -ne 2 ]; then
+if [ $# -ne 1 ]; then
 	usage
-	exit 2
+	exit 1
 fi
 
 # before even going on, make sure all tools work
@@ -65,7 +65,7 @@ APP_FILENAME=$1
 if [ ! -f "${APP_FILENAME}" ]; then
 	usage
 	echo "Can't find file: ${APP_FILENAME}"
-	exit 4
+	exit 2
 fi
 
 # temporary file paths
@@ -79,7 +79,7 @@ if [ -z "$URL" ]; then
 	echo "FAILED!"
 	echo
 	echo "Build uploaded, but no reply from server. Please contact support@testfairy.com"
-	exit 5
+	exit 1
 fi
 
 echo "OK!"
