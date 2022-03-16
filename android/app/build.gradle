@@ -48,7 +48,7 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        manifestPlaceholders += [appAuthRedirectScheme: "com.example.flutter_cicd.flutter_cicd"]
+        manifestPlaceholders += [applicationName: "com.example.flutter_cicd.flutter_cicd"]
     }
 
     buildTypes {
