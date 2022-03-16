@@ -88,8 +88,9 @@ jobs:
           echo pwd
           ls
           cd ../../..
-      - run: echo ${{ secrets.TESTFAIRY_API_KEY }}
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
-        run:  ./testfairy-uploader.sh build/ios/iphoneos/app.ipa ${{ secrets.TESTFAIRY_API_KEY }}
+        run:  ./testfairy-uploader.sh build/ios/iphoneos/app.ipa $testfairy_key
+        env:
+          testfairy_key: ${{ secrets.TESTFAIRY_API_KEY }}
