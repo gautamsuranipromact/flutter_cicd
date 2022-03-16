@@ -33,7 +33,7 @@ jobs:
 #        run: ./testfairy-uploader.sh build/app/outputs/flutter-apk/app-release.apk
 
   github-action-ios:
-    runs-on: macos-latest
+    runs-on: [self-hosted , macos-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -56,5 +56,5 @@ jobs:
           zip -r app.ipa Payload
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
-      - name: Moving IPA to TestFairy
+      - name: Moving APK to TestFairy
         run: ./testfairy-uploader.sh build/ios/iphoneos/app.ipa
