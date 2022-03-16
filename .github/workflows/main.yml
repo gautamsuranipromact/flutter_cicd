@@ -91,6 +91,7 @@ jobs:
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
-        run:  ./testfairy-uploader.sh build/ios/iphoneos/app.ipa $testfairy_key
+        shell: bash
+        run:  ./testfairy-uploader.sh build/ios/iphoneos/app.ipa "$testfairy_key"
         env:
           testfairy_key: ${{ secrets.TESTFAIRY_API_KEY }}
