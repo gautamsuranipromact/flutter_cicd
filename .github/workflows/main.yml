@@ -89,4 +89,4 @@ jobs:
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
         run: |
-          exec ./testfairy-uploader.sh ./build/ios/iphoneos/app.ipa
+          exec ./testfairy-uploader.sh ./build/ios/iphoneos/app.ipa ${{ secrets.TESTFAIRY_API_KEY }}
