@@ -2,7 +2,7 @@ default_platform(:android)
 
 platform :android do
    desc "Assemble source"
-    lane :assemble
+    lane :assemble do
         begin
             gradle(
                 task: 'assemble',
