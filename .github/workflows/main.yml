@@ -54,4 +54,4 @@ jobs:
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving APK to TestFairy
-        run: ./testfairy-uploader.sh /Users/runner/work/flutter_cicd/flutter_cicd/build/ios/iphoneos/Payload.ipa
+        run: ./testfairy-uploader.sh /Payload.ipa
