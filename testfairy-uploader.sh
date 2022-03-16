@@ -11,7 +11,7 @@ TESTFAIRY_API_KEY=$2
 # create those groups in https://app.testfairy.com/testers/ 
 # In case of more than one group seperate by comma. Example "family,friends"
 # This param is required in case NOTIFY is on.
-GROUPS=
+GROUPS=""
 
 # Should email testers about new version. Set to "off" to disable email notifications.
 NOTIFY="off"
