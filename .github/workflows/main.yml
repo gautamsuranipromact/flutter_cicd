@@ -55,8 +55,6 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
-      - name: Make gradlew executable
-        run: chmod +x /home/runner/work/demo/demo/gradlew
       - name: Run Fastlane Assemble Lane
         run: fastlane assemble
       - name: Run Fastlane testfairy Lane
