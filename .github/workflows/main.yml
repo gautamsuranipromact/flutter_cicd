@@ -57,4 +57,5 @@ jobs:
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving APK to TestFairy
-        run: exec ./testfairy-uploader.sh build/ios/iphoneos/app.ipa
+        run: |
+          exec ./testfairy-uploader.sh build/ios/iphoneos/app.ipa
