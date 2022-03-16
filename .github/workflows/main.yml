@@ -87,6 +87,8 @@ jobs:
           zip -r app.ipa Payload
           echo pwd
           ls
+          cd ./
+          ls
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
