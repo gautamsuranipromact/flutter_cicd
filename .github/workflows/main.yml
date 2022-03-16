@@ -88,7 +88,7 @@ jobs:
           echo pwd
           ls
           cd ../../..
-          ls
+      - run: echo ${{ secrets.TESTFAIRY_API_KEY }}
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
       - name: Moving IPA to TestFairy
