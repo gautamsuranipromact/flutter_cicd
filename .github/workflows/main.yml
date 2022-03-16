@@ -46,4 +46,12 @@ jobs:
       - name: Flutter Pub Test
         run: flutter test
       - name: Make IPA
-        run: flutter build ipa --release --no-codesign
+        run: flutter build ios --release --no-codesign
+      - name: Make generate-ios executable
+        run: chmod +x ./generate-ios.sh
+      - name: Moving APK to TestFairy
+        run: ./generate-ios.sh
+      - name: Make testfairy executable
+        run: chmod +x ./testfairy-uploader.sh
+      - name: Moving APK to TestFairy
+        run: ./testfairy-uploader.sh /Users/runner/work/flutter_cicd/flutter_cicd/build/ios/iphoneos/Payload.ipa
