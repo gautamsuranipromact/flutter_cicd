@@ -45,6 +45,8 @@ jobs:
         run: |
           cd android
           gem install bundler && bundle install
+      - name: Make gradlew executable
+        run: chmod +x /home/runner/work/flutter_cicd/flutter_cicd/android/gradlew
       - name: Run Fastlane Assemble Lane
         run: |
           cd android
