@@ -3,7 +3,6 @@ default_platform(:android)
 platform :android do
    desc "Assemble source"
     lane :assemble do
-        begin
             gradle(
                 task: 'assemble',
                 build_type: 'Release'
@@ -13,6 +12,5 @@ platform :android do
                 apk: "build/app/outputs/flutter-apk/app-release.apk",
                 comment: "Build",
             )
-        end
     end
 end
