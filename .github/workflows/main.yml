@@ -63,19 +63,9 @@ jobs:
         run: |
           cd android
           fastlane assemble
+          fastlane upload
       - name: Make testfairy executable
         run: chmod +x ./testfairy-uploader.sh
-      - run: |
-          cd android
-          cd app
-          ls
-      - run: |
-          cd build
-          ls
-          cd app
-          ls
-          cd outputs
-          ls
       - name: Moving APK to TestFairy
         run: ./testfairy-uploader.sh build/app/outputs/flutter-apk/app-release.apk ${{ secrets.TESTFAIRY_API_KEY }}
 
