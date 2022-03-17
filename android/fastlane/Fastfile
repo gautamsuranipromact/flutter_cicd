@@ -3,14 +3,14 @@ default_platform(:android)
 platform :android do
    desc "Assemble source"
     lane :assemble do
-            gradle(
-                task: 'assemble',
-                build_type: 'Release'
-            )
-            testfairy(
-                api_key: "abfe35d3240a13d69b3205d10cac305c9c479fe5",
-                apk: "build/app/outputs/flutter-apk/app-release.apk",
-                comment: "Build",
-            )
+        gradle(
+            task: 'assemble',
+            build_type: 'Release'
+        )
+        testfairy(
+            api_key: "abfe35d3240a13d69b3205d10cac305c9c479fe5",
+            apk: "build/app/outputs/flutter-apk/app-release.apk",
+            comment: "Build",
+        )
     end
 end
