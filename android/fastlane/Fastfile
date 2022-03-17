@@ -6,7 +6,7 @@ platform :android do
         gradle(task: "assembleRelease")
         testfairy(
             api_key: "abfe35d3240a13d69b3205d10cac305c9c479fe5",
-            apk: "build/app/outputs/flutter-apk/app-release.apk",
+            apk: "build/app/outputs/apk/release/app-release.apk",
             comment: "Build",
         )
     end
