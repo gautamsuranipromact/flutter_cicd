@@ -63,6 +63,10 @@ jobs:
         run: |
           cd android
           fastlane assemble
+      - name: Make testfairy executable
+        run: chmod +x ./testfairy-uploader.sh
+      - name: Moving APK to TestFairy
+        run: ./testfairy-uploader.sh android/build/app/outputs/apk/release/app-release.apk ${{ secrets.TESTFAIRY_API_KEY }}
 
 #  github-action-ios:
 #    runs-on: macos-latest
