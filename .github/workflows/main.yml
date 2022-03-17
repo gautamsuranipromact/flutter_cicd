@@ -37,13 +37,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: |
-          cd android
-          ls
+      - run: cd android
       - name: Set up Ruby 2.6
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.6.x
+      - run: ls
       - name: Install Dependencies
         run: gem install bundler && bundle install
       - name: Run Fastlane Assemble Lane
