@@ -98,7 +98,6 @@ jobs:
         env:
           testfairy_key: ${{ secrets.TESTFAIRY_API_KEY }}
 
-
 #  fastlane-ios:
 #    runs-on: macos-latest
 #    steps:
