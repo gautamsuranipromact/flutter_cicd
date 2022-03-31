@@ -48,7 +48,7 @@ android {
         targetSdkVersion 31
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        //manifestPlaceholders += [applicationName: "com.example.flutter_cicd.flutter_cicd"]
+        manifestPlaceholders += [applicationName: "io.flutter.app.FlutterApplication"]
     }
 
     signingConfigs {
