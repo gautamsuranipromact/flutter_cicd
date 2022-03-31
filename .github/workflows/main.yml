@@ -64,6 +64,8 @@ jobs:
           cd android
           fastlane assemble
           fastlane upload
+        env:
+          TESTFAIRY_API_KEY: ${{ secrets.TESTFAIRY_API_KEY }}
 
 
   github-action-ios:
